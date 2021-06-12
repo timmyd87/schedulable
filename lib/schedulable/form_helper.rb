@@ -225,7 +225,7 @@ module Schedulable
           "      }" <<
           "    });" <<
           "  }" << 
-          "  { select.addEventListener('change', update); }" <<
+          "  select.addEventListener('change', update);" <<
           "  update.call(select);" << 
           "})()"
         )
