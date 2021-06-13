@@ -24,7 +24,7 @@ module Schedulable
         message = ""
         if self.rule == 'singular'
           # Return formatted datetime for singular rules
-          datetime = DateTime.new(date.year, date.month, date.day, time.hour, time.min, time.sec, time.zone)
+          datetime = DateTime.new(date.day, date.month, date.year, time.hour, time.min, time.sec, time.zone)
           message = I18n.localize(datetime)
         else
           # For other rules, refer to icecube
