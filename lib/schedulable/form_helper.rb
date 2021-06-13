@@ -41,7 +41,7 @@ module Schedulable
         month_names = month_names.blank? ? Date::MONTHNAMES : month_names
 
         # Pass in default order when missing in translations
-        date_order = I18n.t('date.order', default: [:day, :month, :yeary])
+        date_order = I18n.t('date.order', default: [:day, :month, :year])
         date_order = date_order.map { |order|
           order.to_sym
         }
