@@ -177,7 +177,7 @@ module Schedulable
             (if input_options[:interval]
             
               @template.content_tag("div", style_options[:field_html].merge({data: {group: 'daily,weekly,monthly'}})) do
-                content_wrap(@template, f.label(:interval, "Interval (every "3" days, every "6" months etc)", style_options[:label_html]), style_options[:label_wrapper]) <<
+                content_wrap(@template, f.label(:interval, "Interval (every 3 days, every 6 months etc)", style_options[:label_html]), style_options[:label_wrapper]) <<
                 content_wrap(@template, f.number_field(:interval, style_options[:number_field_html]), style_options[:number_field_wrapper])
               end
             else
