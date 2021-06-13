@@ -23,7 +23,7 @@ en:
       4th: '4th'
       last: 'Last'
     rules: 
-      singular: Singular
+      singular: One Off
       monthly: Monthly
       weekly: Weekly
       daily: Daily
