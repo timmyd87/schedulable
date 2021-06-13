@@ -3,7 +3,7 @@ module Schedulable
     
     STYLES = {
       default: {
-        field_html: {class: 'field mt-2'},
+        field_html: {class: 'field mt-4'},
         input_wrapper: {tag: 'div'}
       },
       bootstrap: {
