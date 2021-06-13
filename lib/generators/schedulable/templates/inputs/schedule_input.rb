@@ -19,7 +19,7 @@ class ScheduleInput < SimpleForm::Inputs::Base
 
     # Pass in default order when missing in translations
     date_order = I18n.t('date.order', default: "")
-    date_order = date_order.blank? ? [:year, :month, :day] : date_order 
+    date_order = date_order.blank? ? [:day, :month, :year] : date_order 
     
     # Setup date_options
     date_options = {
