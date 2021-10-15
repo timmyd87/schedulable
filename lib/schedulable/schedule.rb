@@ -12,7 +12,7 @@ module Schedulable
 
       validates_presence_of :rule
       validates_presence_of :time
-      validates_presence_of :date, if: Proc.new { |schedule| schedule.rule == 'singular' }
+      validates_presence_of :date, if: Proc.new { |schedule| schedule.rule == 'singular' || schedule.rule == 'annually'}
       validate :validate_day, if: Proc.new { |schedule| schedule.rule == 'weekly' }
       validate :validate_day_of_week, if: Proc.new { |schedule| schedule.rule == 'monthly' }
 
@@ -52,7 +52,7 @@ module Schedulable
 
       def update_schedule()
 
-        self.rule||= "singular"
+        self.rule||= "singular" || "annually"
         self.interval||= 1
         self.count||= 0
 
